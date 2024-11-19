@@ -1,6 +1,52 @@
 <html>
 <head>
   <style>
+  div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
   .bn632-hover {
   width: 160px;
   font-size: 16px;
@@ -81,7 +127,7 @@ li a:hover:not(.active) {
 <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
+  <li><a href="https://db10833.github.io/Fluffy_Friends/#home">Home</a></li>
   <li><a href="#news">Image</a></li>
   <li><a href="#contact">Quiz</a></li>
   <li style="float:right"><a class="active" 
@@ -102,6 +148,57 @@ Click on the dog you want for more info!<br>
 <iframe src="https://dogtime.com/dog-breeds"  
 height=400 width=500
 title="Dog Breeds"></iframe>
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="golden-retriever">
+      <img src="https://heronscrossing.vet/wp-content/uploads/Golden-Retriever-1024x683.jpg" alt="Cinque Terre" 
+      width="600" height="400">
+    </a>
+    <div class="desc">Golden Retrievers</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="poodle">
+      <img src="https://image.petmd.com/files/styles/978x550/public/2023-01/toy-poodle.jpg?w=1080&q=75" alt="Forest" 
+      width="600" height="400">
+    </a>
+    <div class="desc">Toy Poodles</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="yorkshire-terrier">
+      <img src="https://cdn.shopify.com/s/files/1/0908/8186/files/524x348_572872a7-aad9-48c4-94c8-552667291863.jpg?v=1646390293" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Yorkshire terrier</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="data:image/webp;base64,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" alt="Mountains"
+      width="600" height="400">
+      <div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="siberian-husky">
+      <img src="https://cdn.britannica.com/84/232784-050-1769B477/Siberian-Husky-dog.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Siberian Husky</div>
+  </div>
+</div>
+    </a>
+  <div class="desc">Maltese Dogs</div>
+</div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
 </body>
 
 </html>
